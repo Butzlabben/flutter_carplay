@@ -15,7 +15,9 @@ class FlutterCarPlaySceneDelegate: UIResponder, CPTemplateApplicationSceneDelega
     let rootTemplate = SwiftFlutterCarplayPlugin.rootTemplate
     let animated = SwiftFlutterCarplayPlugin.animated
     
-    self.interfaceController?.setRootTemplate(rootTemplate!, animated: animated)
+    if rootTemplate != nil {
+      self.interfaceController?.setRootTemplate(rootTemplate!, animated: animated)
+    }
   }
   
   // Fired when just before the carplay become active
